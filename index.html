@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hamdan Abdurrahman – Portofolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EEF2F5;--bg2:#E1E8EE;--ink:#10243A;--muted:#4A5F77;--line:#B7C4D1;
+  --fa:#7B4A24;--fb:#10243A;--fc:#8793A2;--link:#1F5FA8;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0D1B2A;--bg2:#13273B;--ink:#E8EEF4;--muted:#9FB0C3;--line:#2A4259;
+    --fa:#D98F50;--fb:#E8EEF4;--fc:#8FA0B3;--link:#7FB4F0;color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0D1B2A;--bg2:#13273B;--ink:#E8EEF4;--muted:#9FB0C3;--line:#2A4259;
+  --fa:#D98F50;--fb:#E8EEF4;--fc:#8FA0B3;--link:#7FB4F0;color-scheme:dark;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font:400 17px/1.65 "IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:40px 40px;background-position:-1px -1px;
+  background-attachment:fixed;
+}
+body::after{content:"";position:fixed;inset:0;background:var(--bg);opacity:.86;z-index:-1}
+a{color:var(--link)}
+a:focus-visible{outline:3px solid var(--fa);outline-offset:3px;border-radius:3px}
+h1,h2,h3{font-family:"Bricolage Grotesque","IBM Plex Sans",system-ui,sans-serif;margin:0;line-height:1.1}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px}
+
+header.top{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;align-items:center;padding:18px 0}
+.brand{font:700 18px "Bricolage Grotesque",system-ui,sans-serif}
+nav{display:flex;flex-wrap:wrap;gap:4px 18px}
+nav a{color:var(--muted);text-decoration:none;font-size:15px;font-weight:500}
+nav a:hover{color:var(--ink);text-decoration:underline}
+
+.hero{padding:36px 0 8px}
+.hero h1{font-size:clamp(2.6rem,9vw,5.2rem);font-weight:800;letter-spacing:-.03em;max-width:12ch}
+.hero p.role{font:500 clamp(1.1rem,3vw,1.45rem)/1.35 "Bricolage Grotesque",system-ui,sans-serif;color:var(--muted);margin:16px 0 0;max-width:34ch}
+.hero p.loc{margin:10px 0 0;color:var(--muted);font-size:15px}
+.scope{margin:34px 0 0;border:1px solid var(--line);border-radius:6px;background:var(--bg2);overflow:hidden}
+.scope svg{display:block;width:100%;height:auto}
+.scope .legend{display:flex;flex-wrap:wrap;gap:6px 18px;padding:10px 14px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+.scope .legend span::before{content:"";display:inline-block;width:18px;height:3px;border-radius:2px;margin-right:8px;vertical-align:middle;background:currentColor}
+.la{color:var(--fa)}.lb{color:var(--fb)}.lc{color:var(--fc)}
+.wave{fill:none;stroke-width:3.2;stroke-linecap:round}
+.wave g,.wave{transform-box:fill-box}
+.earth{height:12px;margin:34px 0 0;background:repeating-linear-gradient(-45deg,#E3C200 0 10px,#2E9B47 10px 20px);border-radius:2px}
+
+section{padding:46px 0 6px;display:grid;gap:14px}
+section>h2{font-size:1.55rem;font-weight:700;letter-spacing:-.01em;position:relative;padding-top:12px}
+section>h2::before{content:"";position:absolute;left:0;top:0;width:34px;height:4px;border-radius:2px;background:var(--fa)}
+@media (min-width:760px){
+  section{grid-template-columns:200px 1fr;gap:30px}
+}
+.item{padding:0 0 18px 16px;margin:0 0 18px;border-left:3px solid var(--line)}
+.item:last-child{margin-bottom:0}
+.item h3{font-size:1.15rem;font-weight:700}
+.item .meta{color:var(--muted);font-size:15px;margin:3px 0 6px}
+.item p{margin:6px 0 0}
+.k{margin:0 0 20px}
+.k h3{font-size:1.05rem;margin-bottom:6px}
+.k p{margin:0;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.chips li{border:1px solid var(--line);background:var(--bg2);border-radius:999px;padding:5px 14px;font-size:15px;font-weight:500}
+.about{font-size:1.12rem;max-width:62ch}
+.kontak{display:grid;gap:12px;max-width:520px}
+.kontak a{display:block;padding:14px 16px;border:1px solid var(--line);border-radius:6px;background:var(--bg2);color:var(--ink);text-decoration:none;font-weight:600;overflow-wrap:anywhere}
+.kontak a small{display:block;color:var(--muted);font-weight:400;font-size:14px}
+.kontak a:hover{border-color:var(--fa)}
+.tema{font:500 14px "IBM Plex Sans",system-ui,sans-serif;color:var(--ink);background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:7px 16px;cursor:pointer}
+.tema:hover{border-color:var(--fa)}
+.tema:focus-visible{outline:3px solid var(--fa);outline-offset:3px}
+footer{padding:44px 0 34px;color:var(--muted);font-size:14px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand">Hamdan Abdurrahman</div>
+    <nav aria-label="Navigasi utama">
+      <a href="#tentang">Tentang</a>
+      <a href="#pendidikan">Pendidikan</a>
+      <a href="#keahlian">Keahlian</a>
+      <a href="#proyek">Proyek</a>
+      <a href="#pengalaman">Pengalaman</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+    <button class="tema" id="tema" type="button">Tema gelap</button>
+  </header>
+
+  <main>
+    <div class="hero">
+      <h1>Hamdan Abdurrahman</h1>
+      <p class="role">Mahasiswa Teknologi Rekayasa Elektro, Universitas Gadjah Mada</p>
+      <p class="loc">Klaten, Jawa Tengah</p>
+
+      <div class="earth" aria-hidden="true"></div>
+    </div>
+
+    <section id="tentang">
+      <h2>Tentang saya</h2>
+      <p class="about">Mahasiswa tahun pertama Teknologi Rekayasa Elektro di Universitas Gadjah Mada yang tertarik pada sistem arus tinggi dan ingin mendalami distribusi listrik. Saya terampil dalam analisis rangkaian elektronik, desain PCB dengan Eagle, dan perakitan komponen. Saya disiplin, bertanggung jawab, dan nyaman bekerja dalam tim.</p>
+    </section>
+
+    <section id="pendidikan">
+      <h2>Pendidikan</h2>
+      <div>
+        <div class="item">
+          <h3>Universitas Gadjah Mada</h3>
+          <div class="meta">Teknologi Rekayasa Elektro · 2026 – sekarang</div>
+        </div>
+        <div class="item">
+          <h3>SMK Negeri 2 Klaten</h3>
+          <div class="meta">Teknik Elektronika · 2023 – 2026</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="keahlian">
+      <h2>Keahlian</h2>
+      <div>
+        <div class="k">
+          <h3>PCB dan perangkat keras</h3>
+          <p>Desain PCB (Eagle dan KiCad), solder, perakitan komponen, dan pemecahan masalah.</p>
+        </div>
+        <div class="k">
+          <h3>Pengujian dan pemecahan masalah</h3>
+          <p>Pengujian modul IoT Kit (Trainer Arduino) dan penelusuran kesalahan program.</p>
+        </div>
+        <div class="k">
+          <h3>Pemrograman</h3>
+          <p>Python dan mikrokontroler dengan Arduino IDE (Arduino Nano/UNO, ESP32, dan ESP8266).</p>
+        </div>
+        <h3 style="font-size:1.05rem;margin:26px 0 10px">Keterampilan lunak</h3>
+        <ul class="chips">
+          <li>Kerja sama tim</li><li>Tanggung jawab</li><li>Pemecahan masalah</li><li>Manajemen waktu</li><li>Semangat belajar hal baru</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="proyek">
+      <h2>Proyek dan kegiatan</h2>
+      <div>
+        <div class="item">
+          <h3>Desain PCB</h3>
+          <p>Merancang PCB dengan Eagle untuk mobil RC kendali Wi-Fi, robot berkaki, dan alarm pendeteksi penyusup, termasuk merakit komponennya.</p>
+        </div>
+        <div class="item">
+          <h3>Pemrograman mikrokontroler</h3>
+          <p>Memprogram NodeMCU-ESP8266 dengan Arduino IDE untuk robot kendali Wi-Fi.</p>
+        </div>
+        <div class="item">
+          <h3>Pengendalian mutu produk IoT</h3>
+          <p>Memeriksa kualitas Arduino Trainer Kit, ESP-CAM Robot, dan ESP32 Smart Garden.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="pengalaman">
+      <h2>Pengalaman</h2>
+      <div>
+        <div class="item">
+          <h3>Ketua Tim Robotik, SMK Negeri 2 Klaten</h3>
+          <div class="meta">2025 – 2026</div>
+          <p>Memimpin tim beranggotakan 11 orang menyelesaikan proyek dari instruktur, sambil belajar bersama untuk meningkatkan kemampuan desain PCB dan pemrograman.</p>
+        </div>
+      </div>
+      <h2 style="grid-column:1/-1;display:none"></h2>
+    </section>
+
+    <section id="sertifikat">
+      <h2>Sertifikat</h2>
+      <div>
+        <div class="item">
+          <h3>Sertifikat Kompetensi: Implementasi Rangkaian Elektronik</h3>
+          <div class="meta">Ardutech · April 2026</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontak">
+      <h2>Kontak</h2>
+      <div class="kontak">
+        <a href="mailto:hamdanabdurrahman03@gmail.com"><small>Email</small>hamdanabdurrahman03@gmail.com</a>
+        <a href="https://www.linkedin.com/in/hamdan-abdurrahman-b32263402" target="_blank" rel="noopener noreferrer"><small>LinkedIn</small>Hamdan Abdurrahman</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 Hamdan Abdurrahman</footer>
+</div>
+<script>
+(function(){
+  var r=document.documentElement,b=document.getElementById('tema');
+  var m=window.matchMedia('(prefers-color-scheme: dark)');
+  function cur(){return r.getAttribute('data-theme')||(m.matches?'dark':'light');}
+  function set(t){r.setAttribute('data-theme',t);b.textContent=t==='dark'?'Tema terang':'Tema gelap';}
+  var s=null;try{s=localStorage.getItem('tema');}catch(e){}
+  set(s==='dark'||s==='light'?s:cur());
+  b.addEventListener('click',function(){
+    var t=cur()==='dark'?'light':'dark';set(t);
+    try{localStorage.setItem('tema',t);}catch(e){}
+  });
+})();
+</script>
+</body>
+</html>
